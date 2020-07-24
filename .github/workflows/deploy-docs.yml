@@ -18,7 +18,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      
+
+      - run: npm install
       - run: npm run docs:build
 #      - run: echo 'vue-chartjs.org' > docs/.vuepress/dist/CNAME
  
