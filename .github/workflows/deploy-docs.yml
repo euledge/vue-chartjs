@@ -10,8 +10,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -21,7 +19,7 @@ jobs:
         with:
           node-version: '12.x'
       
-#      - run: npm run docs:build
+      - run: npm run docs:build
 #      - run: echo 'vue-chartjs.org' > docs/.vuepress/dist/CNAME
  
       - name: Publish GitHub Page
